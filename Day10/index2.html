@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update or Modifying</title>
+</head>
+<body>
+    <!-- <div id="parentTag">
+        Parent tag
+        <p id="childTag">
+            This element has <span>Spacing</span>
+        </p>
+    </div> -->
+
+    <div id="myPara">
+        This element     has <span>spacing</span>
+
+        <p style="display: block">This has a property Hidden</p>
+    </div>
+
+    <script>
+
+        // 1. innerHTML 
+        // let element = document.getElementById('parentTag');
+
+        // let content = element.innerHTML;
+        // console.log(content);
+
+        // let newPara = "My name is Saurabh Shinde";
+        // element.innerHTML = newPara;
+
+        // 2. outerHTML
+        // let element = document.getElementById('childTag');
+
+        // let content = element.outerHTML;
+        // console.log(content);
+
+        // let newPara = "My name is Saurabh Shinde";
+        // element.innerHTML = newPara;
+
+        // 3.innerText
+        // let element = document.getElementById("myPara");
+
+        // console.log(element);
+
+        // let newPara = "Happy Diwali!"
+        // element.innerText = newPara;
+
+        // 4. textContent
+        // let element = document.getElementById("myPara");
+
+        // let content = element.textContent;
+        // console.log(content);
+
+        let newContent = "This is new content";
+        element.textContent = newContent;
+    </script>
+</body>
+</html>

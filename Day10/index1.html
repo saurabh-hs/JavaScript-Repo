@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Query Selector</title>
+</head>
+<body>
+    <div id="js1">Welcome to JS1</div>
+
+    <div class="divClass">Welcome to JS2</div>
+    <div class="divClass">Welcome to JS2</div>
+    <div id="js2">Welcome to JS3</div>
+
+    <p class="pWelcome">Welcome to Para</p>
+    <span class="spanWelcome">Welcome to span</span>
+
+    <h3>Welcome to H3</h3>
+
+    <script>
+        // 1. querySelector()
+        // let element = document.querySelector("#js1");
+        // element.style.backgroundColor = 'Orange';
+
+        // let element1 = document.querySelector(".divClass");
+        // element1.style.backgroundColor = 'blue';
+
+        // 2. querySelectorAll()
+        let element = document.querySelectorAll(".divClass");
+        element[0].style.backgroundColor = 'green';
+        console.log(element);
+    </script>
+</body>
+</html>
