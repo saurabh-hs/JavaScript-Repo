@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Object</title>
+</head>
+<body>
+    <!-- <button id="myButton">Click Here</button> -->
+
+    <script>
+        // const button = document.getElementById('myButton');
+
+        // button.addEventListener('click', function(event) {
+        //     console.log('Event Type: ', event.type);
+        //     console.log('Target element: ', event.target);
+        //     console.log('Mouse X co-ordinate: ', event.clientX);
+        //     console.log('Mouse Y co-ordinate: ', event.clientY);
+        // });
+
+        console.log('First request on call stack'); //synch
+
+        setTimeout(function() {
+            console.log("After 1000ms this will get into task queue and there it'll wait for call stack to get empty");  //asynch
+        }, 1000);
+
+        console.log("This request gets into call stack because the above function is Non-Blocking"); //synch
+
+    </script>
+</body>
+</html>

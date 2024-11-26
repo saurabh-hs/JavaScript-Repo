@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Listener</title>
+</head>
+<body>
+    <!-- <p id="fpara">This is Event Listener</p> -->
+
+    <!-- <a id="fanchor">Click Here</a> -->
+
+    <!-- <div id="wrapper">
+        <p>First <span>first span</span> para</p>
+        <p>Second <span>second span</span> para</p>
+        <p>Third <span>third span</span> para</p>
+        <p>Fourth <span>fourth span</span> para</p>
+        <p>Fifth <span>fifth span</span> para</p>
+    </div> -->
+
+    <div id="outer">
+        <div id="middle">
+            <button id="inner">Click Here</button>
+        </div>
+    </div>
+
+
+    <script>
+        // function changeText(event) {
+        //     let element = document.getElementById('fpara');
+        //     element.textContent = "This is Saurabh Shinde";
+        // }
+
+        // let myElement = document.getElementById('fpara');
+        // myElement.addEventListener('click', changeText);
+
+        // let anchorElement = document.getElementById('fanchor');
+        // anchorElement.addEventListener('click', function(event) {
+        //     event.preventDefault();
+        //     anchorElement.textContent = 'Click Done';
+        // });
+
+        // let paras = document.querySelectorAll('p');
+        // function alertEvent(event) {
+        //     alert("You have clicked on para: "+ event.target.textContent);
+        // }
+
+        // for(let i =0; i < paras.length; i++) {
+        //     let para = paras[i];
+        //     console.log('Event Listener added');
+        //     para.addEventListener('click', alertEvent);
+        // }
+
+        // let mydiv = document.getElementById('wrapper');
+        // document.addEventListener('click', alertPara);
+
+        // function alertPara(event) {
+        //     alert("You have clicked on para: "+ event.target.textContent);
+        // }
+
+        // function alertPara(event) {
+        //     if(event.target.nodeName === 'SPAN') {
+        //         alert("You have clicked on: "+event.target.textContent);
+        //     }
+        // }
+
+        const outer = document.getElementById('outer');
+        const middle = document.getElementById('middle');
+        const inner = document.getElementById('inner');
+
+        outer.addEventListener('click', function() {
+            console.log('Capturing phase: Outer');
+        }, true);
+
+        middle.addEventListener('click', function() {
+            console.log('Capturing phase: Middle');
+        }, true);
+
+        inner.addEventListener('click', function() {
+            console.log('Capturing phase: Inner');
+        }, true);
+
+        outer.addEventListener('click', function() {
+            console.log('Bubbling phase: Outer');
+        });
+
+        middle.addEventListener('click', function() {
+            console.log('Bubbling phase: Middle');
+        });
+
+        inner.addEventListener('click', function() {
+            console.log('Bubbling phase: Middle');
+        });
+
+    </script>
+</body>
+</html>

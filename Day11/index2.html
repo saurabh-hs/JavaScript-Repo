@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java Script</title>
+</head>
+<body>  
+    <!-- <div id="divId">
+        Hello Guys this is Saurabh Shinde!
+    </div> -->
+
+    <div id="divId" class="class1 class2 class3">
+        Hello Guys this is Saurabh Shinde!
+      </div>
+    
+    <script>
+        // let myElement = document.getElementById("divId");
+
+        // myElement.className += 'class1 class3'
+
+        // myElement.classList = myElement.classList.replace("class1", 'class2');
+        // console.log(myElement);
+
+        let myElement = document.getElementById('divId');
+
+        let existingClasses = myElement.classList;
+        console.log(existingClasses);
+
+        myElement.classList.add('class4');
+        console.log(existingClasses);
+
+        myElement.classList.remove('class2');
+        console.log(existingClasses);
+
+        let isPresent = myElement.classList.contains('class2');
+        console.log(isPresent);
+
+        myElement.classList.toggle('class4');
+        console.log(existingClasses);
+
+    </script>
+</body>
+</html>

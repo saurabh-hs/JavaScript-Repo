@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JAVA Script</title>
+</head>
+<body>
+    <!-- <div id="divElement">
+        Hello Guys, Let's learn JAVA Script
+    </div> -->
+
+    <!-- <a id="aElement">
+        Visit you tube
+    </a> -->
+
+    <!-- <p id="demo">This is a paragraph.</p>
+
+    <button onclick="addAttribute()">Add Attribute</button> -->
+
+    <p id="demo" title="getAttribute example">This is a paragraph.</p>
+
+    <button onclick="getAttributeValue()">Get Attribute Value</button>
+
+</body>
+</html>
+
+<script>
+    // let myElement = document.querySelector('#divElement');
+    // console.log(myElement);
+
+    // myElement.setAttribute("class", "divClass");
+    // console.log(myElement);
+
+    // let myElement = document.querySelector('#aElement');
+    // myElement.setAttribute("href", "https://www.youtube.com/watch?v=ThJOl1gqIjs&list=PLDzeHZWIZsTo0wSBcg4-NMIbC0L8evLrD&index=59");
+    // console.log(myElement);
+
+    // function addAttribute() {
+    //     let para = document.querySelector('#demo');
+    //     para.setAttribute("style", "color: red; font-size: 200px;");
+    //     para.setAttribute("class", "addedClass");
+    // }
+
+    function getAttributeValue() {
+        var para = document.getElementById('demo');
+        var titleAttributeValue = para.getAttribute('title');
+
+        alert("The value of the 'title' attribute is: "+titleAttributeValue);
+    }
+
+
+</script>
